@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juego de Memoria</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- mutear -->
+<button id="muteBtn" title="Volumen">
+  <span class="vol-icon">🔊</span>
+  <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="50">
+</button>
+
+<!-- home -->
+<div id="startScreen">
+  <div class="half half-left" id="halfLeft">
+    <div class="player-form">
+      <label>PLAYER 0</label>
+      <input type="text" id="nameRed" placeholder="Escribe tu apodo..." maxlength="15">
+      <button class="btn-register-red" id="btnRegRed">Registrar</button>
+      <div class="player-status" id="statusRed"></div>
+    </div>
+  </div>
+  <div class="half half-right" id="halfRight">
+    <div class="player-form">
+      <label>PLAYER 1</label>
+      <input type="text" id="namePurple" placeholder="Escribe tu apodo..." maxlength="15">
+      <button class="btn-register-purple" id="btnRegPurple">Registrar</button>
+      <div class="player-status" id="statusPurple"></div>
+    </div>
+  </div>
+
+  <div class="start-title">
+    <div class="carnival-sign" id="carnivalSign">
+      <!-- arr fo -->
+      <div class="bulb-row top" id="bulbTop"></div>
+      <!-- abj fo -->
+      <div class="bulb-row bottom" id="bulbBottom"></div>
+      <!-- izq fo -->
+      <div class="bulb-row left-col" id="bulbLeft"></div>
+      <!-- der fo -->
+      <div class="bulb-row right-col" id="bulbRight"></div>
+
+      <h1>Bienvenida al sencillo<br>pero divertido juego de<br><span class="memoria">MEMORIA</span></h1>
+    </div>
+  </div>
+
+  <div class="start-footer">
+    pagina no oficial desarrollada por un furro que... ojala estar hecho de atun...
+  </div>
+  <button id="playBtn" class="inactive">JUGAR</button>
+</div>
+
+<!-- cargando -->
+<div id="transitionOverlay">
+  <div class="paper">
+    <h2>Cargando...</h2>
+  </div>
+</div>
+
+<!-- juegop -->
+<div id="gameScreen">
+  <div class="player-color-bg" id="playerBg"></div>
+  <div class="timer-container">
+    <div class="timer-bar" id="timerBar"></div>
+  </div>
+  <div class="current-player-display">
+    <h2 id="currentPlayerName"></h2>
+  </div>
+  <div class="score-display">
+    <div class="score-item score-red">
+      <div class="score-label" id="labelRed">Jugador</div>
+      <div class="score-value" id="scoreRed">0</div>
+    </div>
+    <div class="score-item score-purple">
+      <div class="score-label" id="labelPurple">Jugador</div>
+      <div class="score-value" id="scorePurple">0</div>
+    </div>
+  </div>
+  <div class="board-wrapper">
+    <div class="row-col-grid">
+      <div class="col-label-nums">
+        <div class="row-label-space"></div>
+        <div class="col-labels" id="colLabels"></div>
+      </div>
+      <div class="board-row-container">
+        <div class="row-labels" id="rowLabels"></div>
+        <div class="board" id="board"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- disco logo -->
+<div class="music-widget" id="musicWidget">
+  <div class="vinyl-container">
+    <div class="album-cover" id="albumCover">🎵</div>
+    <div class="vinyl-disc" id="vinylDisc"></div>
+  </div>
+  <div class="music-info">
+    <div class="song-name" id="songName">Sin musica</div>
+    <div class="band-name" id="bandName">--</div>
+    <div class="music-time" id="musicTime">0:00</div>
+  </div>
+  <div class="playlist-controls" id="playlistControls">
+    <button id="prevTrack" title="Anterior">⏮</button>
+    <button id="playPauseTrack" title="Pausa/Reproducir">⏸</button>
+    <button id="nextTrack" title="Siguiente">⏭</button>
+  </div>
+</div>
+
+<!-- winner -->
+<div id="victoryScreen">
+  <div class="victory-content" id="victoryContent">
+    <div class="victory-title" id="victoryTitle"></div>
+    <div class="victory-subtitle" id="victorySubtitle"></div>
+    <button class="replay-btn" id="replayBtn">Volver a Jugar</button>
+  </div>
+  <div class="flower-container" id="flowerContainer"></div>
+  <div class="bg-flowers" id="bgFlowers"></div>
+  <div class="flower-particles" id="flowerParticles"></div>
+</div>
+
+<!-- skip test -->
+<button id="skipBtn" title="SKIP (test)">SKIP</button>
+<script src="js.js"></script>
+
+</body>
+</html>
