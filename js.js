@@ -626,7 +626,7 @@ function startDroppingDrawings() {
     const img = document.createElement('img');
     img.className = 'falling-drawing';
     img.src = src;
-    const w = isFlower ? (60 + Math.random() * 50) : (140 + Math.random() * 80);
+    const w = isFlower ? (90 + Math.random() * 75) : (210 + Math.random() * 120);
     const h = w * (isFlower ? 0.9 : 0.75);
     const pos = findPos(w, h);
     img.style.left = pos.x + 'px';
