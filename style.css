@@ -874,23 +874,15 @@ body {
   right: 15px;
   z-index: 300;
   padding: 8px 16px;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: none;
   border-radius: 8px;
-  background: rgba(155,89,182,0.6);
-  backdrop-filter: blur(6px);
-  color: #fff;
-  font-family: 'Fredoka One', cursive;
-  font-size: 0.7rem;
+  background: transparent;
+  color: transparent;
   cursor: pointer;
-  transition: all 0.3s;
-  letter-spacing: 1px;
-  display: none;
+  font-size: 0.7rem;
 }
 
 #skipBtn:hover {
-  background: rgba(155,89,182,0.9);
-  border-color: #9b59b6;
-  transform: scale(1.05);
 }
 
 /* flores fondo victoria */
